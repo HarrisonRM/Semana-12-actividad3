@@ -1,0 +1,43 @@
+.galeria {
+    display: flex;
+    /* Organiza las imágenes en fila. */
+    flex-wrap: wrap;
+    /* Permite que las imágenes bajen a la siguiente línea si no hay espacio. */
+    justify-content: center;
+    /*  Centra las imágenes en el medio del contenedor.*/
+    gap: 10px;
+    /*  Deja un espacio de 10 píxeles entre las imágenes. */
+    max-width: 800px;
+    /*  Limita el ancho total del contenedor a 800 píxeles. */
+    margin: 0 auto;
+    /* Centra el contenedor en la página. */
+}
+
+.galeria img {
+    width: 23%;
+    /* Hace que cada imagen ocupe el 23% del ancho del contenedor. */
+    height: auto;
+    /*  Ajusta la altura de la imagen para que mantenga su forma. */
+    object-fit: cover;
+    /* Asegura que la imagen llene el espacio sin distorsionarse */
+    border-radius: 5px;
+    /* Redondea las esquinas de las imágenes. */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    /*  Añade una sombra suave debajo de las imágenes. */
+    transition: all 0.3s ease;
+    /* Hace que cualquier cambio en la imagen sea suave y gradual durante 0.3 segundos. */
+}
+
+@media (max-width: 768px) { /*  Establece reglas para pantallas más pequeñas . */
+    .galeria img {
+        
+        width: 48%;/* Cambia el tamaño de las imágenes al 48% del ancho, permitiendo que quepan más en una fila. */
+    }
+}
+
+@media (max-width: 480px) { /*  Establece reglas para pantallas aún más pequeñas */
+    .galeria img {
+        
+        width: 95%; /* Cambia el tamaño de las imágenes al 95% del ancho */
+    }
+}
